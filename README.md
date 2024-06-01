@@ -6,6 +6,16 @@
 
 ## Usage
 
+### [Setup Zsh/Syntax Highlighting/Autocompletion](setup_zsh.sh)
+
+```sh
+#with curl
+curl -fsSL https://git.meghomejail.me/megane0103/sh-scripts/raw/HEAD/setup_zsh.sh | bash
+
+#with wget
+wget -q https://git.meghomejail.me/megane0103/sh-scripts/raw/HEAD/setup_zsh.sh -O- | bash
+```
+
 ### [Enable Root SSH](enable_root_ssh.sh)
 
 ```sh
@@ -35,3 +45,4 @@ curl -fsSL https://git.meghomejail.me/megane0103/sh-scripts/raw/HEAD/nuke.sh | b
 #with wget
 wget -q https://git.meghomejail.me/megane0103/sh-scripts/raw/HEAD/nuke.sh -O- | bash
 ```
+
