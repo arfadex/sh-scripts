@@ -14,10 +14,6 @@ curl -fsSL https://git.meghomejail.me/megane0103/sh-scripts/raw/HEAD/enable_root
 
 #with wget
 wget -q https://git.meghomejail.me/megane0103/sh-scripts/raw/HEAD/enable_root_ssh.sh -O- | bash
-
-chmod +x enable_root_ssh.sh
-
-sudo ./enable_root_ssh.sh
 ```
 
 ### [Remove Login Messages](remove_login_messages.sh)
@@ -28,10 +24,6 @@ curl -fsSL https://git.meghomejail.me/megane0103/sh-scripts/raw/HEAD/remove_logi
 
 #with wget
 wget -q https://git.meghomejail.me/megane0103/sh-scripts/raw/HEAD/remove_login_messages.sh -O- | bash
-
-chmod +x remove_login_messages.sh
-
-sudo ./remove_login_messages.sh
 ```
 
 ### [Free up space (unironically)](nuke.sh)
@@ -42,8 +34,4 @@ curl -fsSL https://git.meghomejail.me/megane0103/sh-scripts/raw/HEAD/nuke.sh | b
 
 #with wget
 wget -q https://git.meghomejail.me/megane0103/sh-scripts/raw/HEAD/nuke.sh -O- | bash
-
-chmod +x nuke.sh
-
-sudo ./nuke.sh
 ```
