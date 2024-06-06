@@ -5,7 +5,10 @@ sudo apt update
 sudo apt install -y zsh git curl
 
 # Change the default shell to zsh
-chsh -s $(which zsh)
+if ! grep -Fxq "$(which zsh)" /etc/shells; then
+    echo "$(which zsh)" | sudo tee -a /etc/shells
+fi
+sudo chsh -s $(which zsh) "$USER"
 
 # Install Oh My Zsh if it's not already installed
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -35,5 +38,6 @@ if ! grep -q 'PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%
   echo 'PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "' >> ~/.zshrc
 fi
 
+# Feedback to user
 echo "Zsh has been set up with syntax highlighting, autocompletion, and a colored prompt."
 echo "Please start a new Zsh session by typing 'zsh' or opening a new terminal to apply the changes."
